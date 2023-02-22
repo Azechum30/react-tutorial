@@ -1,6 +1,7 @@
 .container {
 	background-color: white;
 	margin: 0;
+	overflow: hidden;
 }
 
 .book-list {
@@ -8,14 +9,14 @@
 	gap: 2rem;
 	width: 90vw;
 	max-width: 1170px;
-	padding-block: 5rem;
-	margin-inline: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
 	.book-list {
 		grid-template-columns: repeat(3, 1fr);
-		align-items: start;
+		/* align-items: start; */
 	}
 }
 
@@ -25,6 +26,18 @@
 	color: #222;
 	text-align: center;
 	padding: 2rem;
+	position: relative;
+}
+
+.index {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: orangered;
+	color: #fff;
+	padding: 1rem;
+	border-bottom-right-radius: 1rem;
+	border-top-left-radius: 1rem;
 }
 
 .book:hover {
@@ -46,4 +59,13 @@
 .book h4 {
 	font-size: 0.75rem;
 	margin-top: 0.5rem;
+}
+
+.book-list-container h1 {
+	text-align: center;
+	padding-top: 4rem;
+	margin-top: 0;
+	text-transform: capitalize;
+	font-size: 2rem;
+	margin-bottom: 2rem;
 }
